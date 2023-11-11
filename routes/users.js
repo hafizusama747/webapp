@@ -436,7 +436,7 @@ const dailyTaskGeneration = schedule.scheduleJob('*/1 * * * *', function () {
 });
 
 // Schedule the job for clearing tasks to run once daily at 10:14 PM
-const clearTasks = schedule.scheduleJob('57 04 * * *', function () {
+const clearTasks = schedule.scheduleJob('45 05 * * *', function () {
   console.log("run")
     clearAllTasks();
 });
