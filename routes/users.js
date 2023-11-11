@@ -363,6 +363,7 @@ async function generateTasksForUsers() {
     try {
       const users = await User.find();
       console.log(`Total users: ${users.length}`);
+      console.log("hahahah");
 
       for (const user of users) {
         console.log(`Generating tasks for user: ${user._id}`);
@@ -436,7 +437,7 @@ const dailyTaskGeneration = schedule.scheduleJob('*/1 * * * *', function () {
 });
 
 // Schedule the job for clearing tasks to run once daily at 10:14 PM
-const clearTasks = schedule.scheduleJob({ hour: 6, minute: 07, tz: 'Asia/Karachi' }, function () {
+const clearTasks = schedule.scheduleJob({ hour: 6, minute: 14, tz: 'Asia/Karachi' }, function () {
   console.log("Scheduled job started at", new Date());
   clearAllTasks();
   console.log("Scheduled job completed at", new Date());
